@@ -1,7 +1,10 @@
+body {
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
-  overflow-x: 0;
 }
 body {
   font-family: "Fira Sans", serif;
@@ -97,9 +100,10 @@ nav {
 .bg {
   background-image: url(imges/bg.png);
   background-repeat: no-repeat;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   background-size: cover;
+  background-position: center;
 }
 .Curriculum h2 {
   text-align: center;
@@ -200,33 +204,41 @@ nav {
   font-weight: bold;
 }
 /* card three end*/
-
+.font-awesome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 80px;
+  text-align: center;
+}
 /* our story start */
 .bg-2 {
   background: linear-gradient(
     0deg,
-    rgba(254, 192, 1, 0.9612219887955182) 0%,
+    rgba(254, 163, 1, 30) 0%,
     rgba(255, 255, 255, 1) 82%
   );
-
+  color: #fea10149;
   padding: 50px 0;
-  margin-bottom: 30px;
 }
 .Our-Stories {
-  margin-top: 80px;
+  margin-top: 50px;
   text-align: center;
   font-size: 35px;
-  font-weight: bold;
+  color: #000;
+  font-weight: 500;
 }
 .stories {
   margin-top: 80px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 .group-photo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 0 20px;
 }
 .primary-btn1 {
   position: relative;
@@ -236,20 +248,22 @@ nav {
   font-weight: 500;
   border-radius: 47px;
   border: none;
-
-  right: 500px;
+}
+.primary-btn1:hover {
+  background-color: #5d58f0;
 }
 
 .primary-btn2 {
   position: relative;
   padding: 15px 35px;
-  background-color: #95b226;
+  background-color: #5d58f0;
   color: #ffffff;
   font-weight: 500;
   border-radius: 47px;
   border: none;
-  bottom: 160px;
-  right: 280px;
+}
+.primary-btn2:hover {
+  background-color: #5d58f0;
 }
 .primary-btn3 {
   position: relative;
@@ -259,8 +273,9 @@ nav {
   font-weight: 500;
   border-radius: 47px;
   border: none;
-  bottom: 160px;
-  left: 30px;
+}
+.primary-btn3:hover {
+  background-color: #5d58f0;
 }
 .primary-btn4 {
   position: relative;
@@ -270,8 +285,9 @@ nav {
   font-weight: 500;
   border-radius: 47px;
   border: none;
-  bottom: 160px;
-  left: 30px;
+}
+.primary-btn4:hover {
+  background-color: #5d58f0;
 }
 .primary-btn4 {
   position: relative;
@@ -281,10 +297,10 @@ nav {
   font-weight: 500;
   border-radius: 47px;
   border: none;
-  bottom: 160px;
-  left: 30px;
 }
-
+.primary-btn3:hover {
+  background-color: #5d58f0;
+}
 .story-card h3 {
   margin-top: 45px;
   font-size: 24px;
@@ -298,12 +314,15 @@ nav {
   background-color: #ffffff;
   border-radius: 0 0 16px 16px;
   padding: 60px 38px;
+  padding-top: 0;
   margin-bottom: 50px;
+  margin-top: -30px;
 }
 .story-title {
   border-radius: 0 0 16px 16px;
   padding: 23px 30px;
   background-color: #ffffff;
+  margin-top: -50px;
 }
 
 .story-button {
@@ -318,6 +337,13 @@ nav {
   border-radius: 12px;
   border: none;
 }
+
+.story-title h2 {
+  font-size: 16px;
+  color: #000;
+  padding-top: 20px;
+}
+
 /*/* our story end*/
 
 /*footer area start */
@@ -366,7 +392,7 @@ footer {
   margin-right: 10px;
   margin-top: 32px;
 }
-/*footer area start */
+/*footer area end */
 .bar-icon {
   display: none;
 }
@@ -389,16 +415,44 @@ footer {
   .banner {
     flex-direction: column;
   }
+
+  .Curriculum-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .stories {
+    grid-template-columns: 1fr;
+  }
+  .group-photo {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footer {
+    margin: 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .Abouts {
+    padding-left: 0px;
+    color: #ffffff;
+  }
+  .pl-50 {
+    padding-left: 0;
+  }
+  .container {
+    margin: 20px 20px;
+  }
+
+  .story-title {
+    margin-top: -10px;
+    margin-bottom: 50px;
+  }
+  .group-photo img {
+    width: 100%;
+  }
 }
 /*Curriculum responsive  */
-.Curriculum-cards {
-  flex-direction: column;
-  display: block;
-}
+
 /* story responsive */
-.story-card {
-  display: none;
-}
 
 /* footer responsive */
 
