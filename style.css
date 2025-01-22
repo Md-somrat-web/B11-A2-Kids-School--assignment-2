@@ -450,6 +450,9 @@ footer {
     width: 100%;
   }
 }
+.font-awesome {
+  display: none;
+}
 /*Curriculum responsive  */
 
 /* story responsive */
